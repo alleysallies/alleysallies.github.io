@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f7d9a1;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 150px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Video Section */
+#updates {
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#updates h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.5s ease;
+}
+
+#updates p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-box {
+    background: #f7d9a1;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-box video {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* General Section Styling */
+section {
+    padding: 40px;
+    color: #333;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+/* Specific Section Backgrounds */
+#updates {
+    background: linear-gradient(135deg, #f7d9a1, #ffdcb4); /* Warm gradient for Updates */
+}
+
+#location {
+    background: linear-gradient(135deg, #cce7ff, #99d6ff); /* Cool gradient for Location */
+}
+
+#gallery {
+    background: linear-gradient(135deg, #ffd1dc, #ff7eb3); /* Pink tones for Gallery */
+}
+
+#mission {
+    background: linear-gradient(135deg, #a8ff78, #78ffd6); /* Greenish tones for Mission */
+}
+
+#donate {
+    background: linear-gradient(135deg, #fbc2eb, #a18cd1); /* Purple-pink for Donate */
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1.5s ease;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Box Styling for Videos, Images, etc. */
+.video-box, .gallery-box {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-box:hover, .gallery-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Margins */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+}
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Toggle Button Styling */
+#toggleButton {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff7eb3;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleButton:hover {
+    background-color: #ff5690;
+    transform: scale(1.05);
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    text-align: center;
+    color: #fff; /* Text color for contrast */
+    padding: 100px 20px;
+    background: url('your-background-image.jpg') no-repeat center center / cover;
+    background-blend-mode: overlay; /* Adds transparency to the background */
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay color with transparency */
+}
+
+/* Section Title */
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Paragraph */
+#home p {
+    font-size: 1.5em;
+    animation: fadeInUp 1.5s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.map-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        .map-button:hover {
+            background-color: #0056b3;
+        }

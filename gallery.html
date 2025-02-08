@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="galler.css">
+    <title>Our Work Gallery</title>
+   <marquee><h1><p style="color: Blue;">We are well Satisfied and certificated Pet Sanctuary </p></h1></marquee>
+<!--center><div><img src="img/cericate.jpg"></div></center-->
+    <div class="container">
+        <h1>Our Work Gallery</h1>
+
+        <h2>Photos</h2>
+        <div class="gallery-section">
+            <div class="gallery-item">
+                <img src="img/n.jpg" alt="Work Photo 1">
+                <div class="info">Broke the bones in the neck and Got some treatment Hoping for the best</div>
+                <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+                 <form action="https://www.paypal.com/donate/?hosted_button_id=XXQ7P348RZ6ZL" method="post" target="_blank">
+            <button type="submit">Donate with PayPal</button>
+            </div>
+            <div class="gallery-item">
+                <img src="img/b.jpg" alt="Work Photo 2">
+                <div class="info">The x- ray of the Nina her Bone got dislocated your support will be Great</div><button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+                 <form action="https://www.paypal.com/donate/?hosted_button_id=XXQ7P348RZ6ZL" method="post" target="_blank">
+            <button type="submit">Donate with PayPal</button>
+                
+            </div>
+            <div class="gallery-item">
+                <img src="img/S.jpg" alt="Work Photo 3">
+                <div class="info">Needs a fee of $250 to get her medication You can donate to us clicking in thi button </div>
+                <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+                 <form action="https://www.paypal.com/donate/?hosted_button_id=XXQ7P348RZ6ZL" method="post" target="_blank">
+            <button type="submit">Donate with PayPal</button>
+            </div>
+        </div>
+        
+        <h2>Videos</h2>
+        <div class="gallery-section">
+            <div class="gallery-item">
+                <video controls>
+                    <source style="width:auto; height: auto;" src="img/doc.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source style="width:100px; height: 45px;" src="img/sick.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <footer>
+            © 2024 ALLEY CATS ALLIES |equality for pets. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        function toggleInfo(button) {
+            const info = button.previousElementSibling;
+            if (info.style.display === "block") {
+                info.style.display = "none";
+                button.textContent = "Read More";
+            } else {
+                info.style.display = "block";
+                button.textContent = "Read Less";
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
