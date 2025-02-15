@@ -1,65 +1,72 @@
-function initMap() {
-    // Location coordinates
-    const location = { lat: 37.7749, lng: -122.4194 }; // Replace with your actual location
-
-    // Custom map styles (colorful and fun)
-    const mapStyles = [
-        {
-            "featureType": "water",
-            "stylers": [{ "color": "#b9d3c2" }]
-        },
-        {
-            "featureType": "landscape",
-            "stylers": [{ "color": "#f7f1df" }]
-        },
-        {
-            "featureType": "road",
-            "stylers": [{ "color": "#f8c967" }]
-        },
-        {
-            "featureType": "poi.park",
-            "stylers": [{ "color": "#a5b076" }]
-        },
-        {
-            "featureType": "transit",
-            "stylers": [{ "color": "#d0d0d0" }]
-        },
-        {
-            "featureType": "building",
-            "elementType": "geometry",
-            "stylers": [{ "color": "#f5f5f5" }]
+$(document).ready(function(){
+    $(window).scroll(function(){
+        // sticky navbar on scroll script
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
         }
-    ];
-
-    // Initialize the map
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: location,
-        styles: mapStyles,
-        disableDefaultUI: true, // Hides default controls for a cleaner look
+        
+        // scroll-up button show/hide script
+        if(this.scrollY > 500){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
     });
 
-    // Add a marker to the map
-    new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Pets Haven",
-        animation: google.maps.Animation.BOUNCE, // Marker animation
-    });
-}
-// Toggle Button Functionality
-document.getElementById("toggleButton").addEventListener("click", function () {
-    const hiddenVideos = document.querySelectorAll(".video-box.hidden");
-    
-    // Toggle visibility of all hidden videos
-    hiddenVideos.forEach((video) => {
-        video.classList.toggle("hidden");
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+        // removing smooth scroll on slide-up button click
+        $('html').css("scrollBehavior", "auto");
     });
 
-    // Change button text based on visibility
-    if (this.textContent === "Show More Videos") {
-        this.textContent = "Show Less Videos";
-    } else {
-        this.textContent = "Show More Videos";
-    }
+    $('.navbar .menu li a').click(function(){
+        // applying again smooth scroll on menu items click
+        $('html').css("scrollBehavior", "smooth");
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+
+    // typing text animation script
+    var typed = new Typed(".typing", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    var typed = new Typed(".typing-2", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    // owl carousel script
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
 });
